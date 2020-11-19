@@ -1,6 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap";
 
 :root {
+    --color-primary: #F52922;
     --color-secondary: #50fa7b;
 }
 
@@ -49,13 +50,13 @@ header {
 
 #wrapper {
     text-align: center;
+    margin-top: 30px;
 }
 
 #wrapper img {
     border-radius: 50%;
     border: 5px solid var(--color-secondary);
     margin-bottom: 30px;
-    margin-top: 30px;
     width: 100px;
     transition: ease 1900ms;
 }
@@ -94,4 +95,38 @@ header {
 .links-footer a:hover {
     border-bottom: 3px solid green;
     transition: ease 350ms;
+}
+
+/* ==> CARD <== */
+
+.cards { 
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card { 
+    background-color: var(--color-primary);
+}
+
+.card__image-container img{
+    width: 100%;
+}
+
+.card_content,
+.card__info {
+    padding: 24px;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card__price {
+    background-color: var(--color-primary);
+    filter: brightness(90%);
+    padding: 5px 20px;
 }
